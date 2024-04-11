@@ -26,15 +26,15 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
         </tr>
       </thead>
       <tbody>
-        {expenses.map((Expense) => (
-          <tr key={Expense.id}>
-            <td>Expense.description</td>
-            <td>Expense.amount</td>
-            <td>Expense.category</td>
+        {expenses.map((expense) => (
+          <tr key={expense.id}>
+            <td>{expense.description}</td>
+            <td>{expense.amount}</td>
+            <td>{expense.category}</td>
             <td>
               <button
                 className="btn btn-outline-danger"
-                onClick={() => onDelete(Expense.id)}
+                onClick={() => onDelete(expense.id)}
               >
                 delete
               </button>
